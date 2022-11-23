@@ -1,0 +1,20 @@
+﻿@model Animal
+@{
+    ViewData["Title"] = " Animal Details";
+}
+
+<h1>Details</h1>
+
+<dl>
+    <dt>Animal</dt>
+    <dd>@Model.AnimalName</dd>
+
+    <dt>Species</dt>
+    <dd>@Model.Species</dd>
+
+    <dt>Called by name</dt>
+    <dd>@Model.CalledByName</dd>
+   
+</dl>
+<a asp-action="ZooPark">Go back to ZooPage</a>
+

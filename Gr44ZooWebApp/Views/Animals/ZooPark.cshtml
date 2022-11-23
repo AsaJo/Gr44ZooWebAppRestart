@@ -1,0 +1,56 @@
+﻿@model List<Animal>
+@{
+    ViewData["Title"] = "ZooPark";
+}
+
+<h1>Zoo Park</h1>
+
+<a asp-action="Create">Add an animal to the Zoo</a>
+
+@*<table>
+    <thead>
+        <hr />
+    <td>Animal</td>
+    <td>Species</td>
+    <td>CalledByName</td>
+    <td>Quantity</td>
+
+    </thead>
+    <tbody>
+        @foreach (Animal animal in Model)
+        {
+            <tr>
+                <td>@animal.AnimalName</td>
+                <td>@animal.Species</td>
+                <td>@animal.CalledByName</td>
+                <td>@animal.Quantity</td>
+                <td>@Html.ActionLink("Details","Details","Animals", new {id = animal.Id})</td> 
+            </tr>
+
+        }
+
+    </tbody>
+
+</table>*@
+<div class="row  shadow-sm p-3 mb-5 bg-white rounded">
+
+    <div class="col-3">Animal</div>
+    <div class="col-3">Species</div>
+    <div class="col-3">CalledByName</div>
+    <div class="col-3">Quantity</div>
+
+</div>
+@foreach (Animal animal in Model)
+{
+@*    <div class="row">
+
+        <div class="col-3">@animal.AnimalName</div>
+        <div class="col-3">@animal.Species</div>
+        <div class="col-3">@animal.CalledByName</div>
+        <div class="col-3">@animal.Quantity</div>
+        <div>@Html.ActionLink("Details","Details","Animals", new {id = animal.Id})</div>
+
+    </div>*@
+    <partial name="_AnimalRow" model="animal"></partial>
+
+}

@@ -1,0 +1,17 @@
+﻿@model Animal
+<div class="row font-weight-bold mt-3 d-flex-column align-items-lg-stretch">
+<div class="col-3">Animal Name</div>
+<div class="col-3">Species</div>
+<div class="col-3">CalledByName</div>
+<div class="col-3">Quantity</div>
+</div>
+
+<div class="row " shadow-sm p-3 mb-5 bg-white rounded"">
+
+    <div class="col-3">@Model.AnimalName</div>
+    <div class="col-3">@Model.Species</div>
+    <div class="col-3">@Model.CalledByName</div>
+    <div class="col-3">@Model.Quantity</div>
+    @*<div>@Html.ActionLink("Details","Details","Animals", new {id = Model.Id})</div>*@
+
+</div>

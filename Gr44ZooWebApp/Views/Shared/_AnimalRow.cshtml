@@ -1,0 +1,12 @@
+﻿@model Animal
+
+<div class="row shadow-sm p-3 mb-5 bg-white rounded">
+
+    <div class="col-3 shadow-sm p-3 mb-5 bg-white rounded">@Model.AnimalName</div>
+    <div class="col-3 shadow-sm p-3 mb-5 bg-white rounded">@Model.Species</div>
+    <div class="col-3 shadow-sm p-3 mb-5 bg-white rounded">@Model.CalledByName</div>
+    <div class="col-3 shadow-sm p-3 mb-5 bg-white rounded">@Model.Quantity</div>
+    <div>@Html.ActionLink("Details","Details","Animals", new {id = Model.Id})</div>
+    <div>@Html.ActionLink("Delete","Delete","Animals", new {id = Model.Id})</div>
+
+</div>

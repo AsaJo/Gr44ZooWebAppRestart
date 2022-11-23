@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+<h1>Veterinary</h1>
+
+
+<button onclick="getLastAnimal('@Url.Action("LastAnimalArrivel","Animals")')">Get last Animal arrived with Ajax</button>
+<button onclick="getLastAnimalJSON('@Url.Action("LastAnimalArrivelJSON","Animals")')">Get last Animal arrived with JSON with Ajax</button>
+<button onclick="getAnimalList('@Url.Action("AjaxAnimalList","Animals")')">Get Animal-list with Ajax</button>
+<br/>
+<br />
+<input class="form-control" type="number" name="id" id="idInput" placeholder=" animal id" />
+<br/>
+<button onclick="postWithAjax('@Url.Action("AnimalDetails","Animals")','idInput')">Post Animal id with Ajax</button>
+
+<br />
+<br />
+<input class="form-control" type="text" name="species" id="inputSpecies" placeholder=" Post Species" />
+<br />
+<button onclick="postSpeciesWithAjax('@Url.Action("AnimalSpecies","Animals")','inputSpecies')">Post Animal species with Ajax</button>
+
+<div id="result"></div>
+

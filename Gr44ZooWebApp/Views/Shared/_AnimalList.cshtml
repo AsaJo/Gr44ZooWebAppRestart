@@ -1,0 +1,16 @@
+﻿@model List<Animal>
+
+
+<div class="row">
+
+    <div class="col-3">Animal</div>
+    <div class="col-3">Species</div>
+    <div class="col-3">CalledByName</div>
+    <div class="col-3">Quantity</div>
+
+</div>
+@foreach (Animal animal in Model)
+{
+
+    <partial name="_AnimalRow" model="animal"></partial>
+}
